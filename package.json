@@ -1,0 +1,25 @@
+{
+  "name": "react-particles-ui",
+  "version": "0.0.0",
+  "description": "A core React UI component library",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "browser": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build": "rollup -c --bundleConfigAsCjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dflores009@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@types/react": "^18.2.45",
+    "prettier": "3.1.1",
+    "rollup": "^4.9.1",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.0"
+  }
+}
