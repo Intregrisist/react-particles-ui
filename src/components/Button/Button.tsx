@@ -4,6 +4,7 @@ export type ButtonProps = DetailedHTMLProps<
   ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
 >
+
 const Button: FC<ButtonProps> = (props) => {
   return <button {...props} />
 }

@@ -1,0 +1,6 @@
+# Add common .prettierignore folders
+node_modules/
+dist/
+build/
+.out/
+.next/
