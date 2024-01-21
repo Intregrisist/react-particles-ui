@@ -1,12 +1,12 @@
-import { FlatCompat } from '@eslint/eslintrc'
-import globals from 'globals'
-import reactRecommended from 'eslint-plugin-react/configs/recommended.js'
-import reactHooksPlugin from 'eslint-plugin-react-hooks'
-import eslintConfigPrettier from 'eslint-config-prettier'
+import { FlatCompat } from '@eslint/eslintrc';
+import globals from 'globals';
+import reactRecommended from 'eslint-plugin-react/configs/recommended.js';
+import reactHooksPlugin from 'eslint-plugin-react-hooks';
+import eslintConfigPrettier from 'eslint-config-prettier';
 
-const compat = new FlatCompat()
+const compat = new FlatCompat();
 
-const files = ['**/*.{js,jsx,mjs,cjs,ts,tsx}']
+const files = ['**/*.{js,jsx,mjs,cjs,ts,tsx}'];
 
 export default [
   ...compat.extends('standard-with-typescript'),
@@ -44,4 +44,4 @@ export default [
       ],
     },
   },
-]
+];

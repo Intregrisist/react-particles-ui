@@ -12,11 +12,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "lint": "eslint ./src/**/*.{js,jsx,ts,tsx}"
+    "lint": "eslint ./src/**/*.{js,jsx,ts,tsx}",
+    "prettier": "prettier --write ./src/**/*.{js,jsx,ts,tsx}"
   },
   "author": "dflores009@gmail.com",
   "license": "MIT",
   "devDependencies": {
+    "@eslint/eslintrc": "^3.0.0",
     "@rollup/plugin-typescript": "^11.1.5",
     "@storybook/addon-essentials": "^7.6.6",
     "@storybook/addon-interactions": "^7.6.6",

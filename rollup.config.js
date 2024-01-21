@@ -1,10 +1,10 @@
-import typescript from '@rollup/plugin-typescript'
+import typescript from '@rollup/plugin-typescript';
 
-import pkg from './package.json'
+import pkg from './package.json';
 
 const globals = {
   react: 'React',
-}
+};
 
 export default {
   input: './src/index.ts',
@@ -14,20 +14,20 @@ export default {
       file: pkg.browser,
       format: 'umd',
       name: pkg.name,
-      globals: globals,
+      globals,
     },
     {
       file: pkg.main,
       format: 'cjs',
       name: pkg.name,
-      globals: globals,
+      globals,
     },
     {
       file: pkg.module,
       format: 'es',
       name: pkg.name,
-      globals: globals,
+      globals,
     },
   ],
   plugins: [typescript()],
-}
+};
