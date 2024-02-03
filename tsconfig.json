@@ -18,8 +18,8 @@
 //  At this time we don't need additional types
 //  "types": ["node", "jest"],
     "declaration": true,
-  "declarationDir": "types",
-  "emitDeclarationOnly": true,
+    "declarationDir": "types",
+    "emitDeclarationOnly": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true
   },
