@@ -1,7 +1,9 @@
 import typescript from '@rollup/plugin-typescript';
 import postcss from 'rollup-plugin-postcss';
-import postcssPresetEnv from 'postcss-preset-env';
 import del from 'rollup-plugin-delete';
+import postcssPresetEnv from 'postcss-preset-env';
+import postcssImport from 'postcss-import';
+import postcssNested from 'postcss-nested';
 import path from 'path';
 
 import pkg from './package.json';
@@ -43,8 +45,13 @@ export default {
     }),
     postcss({
       extract: path.resolve('dist/styles.css'),
+      // TODO: Enable before initial release, currently disabled for debug purposes
+      // minimize: true,
       plugins: [
+        postcssImport(),
+        postcssNested(),
         postcssPresetEnv({
+          // https://preset-env.cssdb.org/features/#stage-2
           stage: 2,
         }),
       ],

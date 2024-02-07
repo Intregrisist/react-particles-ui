@@ -1,3 +1,3 @@
-import './styles/index.pcss';
+import './styles.pcss';
 
 export * from './components';
