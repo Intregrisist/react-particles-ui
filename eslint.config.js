@@ -34,6 +34,7 @@ export default [
       'react/react-in-jsx-scope': 'off',
       'react/jsx-uses-react': 'off',
       'react-hooks/exhaustive-deps': 'error',
+      '@typescript-eslint/strict-boolean-expressions': 'off',
       '@typescript-eslint/consistent-type-imports': [
         'error',
         {

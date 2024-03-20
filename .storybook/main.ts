@@ -1,4 +1,5 @@
-import type { StorybookConfig } from '@storybook/react-webpack5'
+import type { StorybookConfig } from '@storybook/react-webpack5';
+import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
@@ -7,7 +8,7 @@ const config: StorybookConfig = {
     '@storybook/addon-essentials',
     '@storybook/addon-onboarding',
     '@storybook/addon-interactions',
-    '@storybook/addon-mdx-gfm'
+    '@storybook/addon-mdx-gfm',
   ],
   framework: {
     name: '@storybook/react-webpack5',
@@ -29,5 +30,11 @@ const config: StorybookConfig = {
   docs: {
     autodocs: 'tag',
   },
-}
-export default config
+  webpackFinal(config, { configType }) {
+    config.resolve = config.resolve || {};
+    config.resolve.plugins = config.resolve.plugins || [];
+    config.resolve.plugins?.push(new TsconfigPathsPlugin());
+    return config;
+  },
+};
+export default config;

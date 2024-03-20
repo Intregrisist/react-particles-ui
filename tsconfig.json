@@ -21,7 +21,10 @@
     "declarationDir": "types",
     "emitDeclarationOnly": true,
     "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@lib/*": ["./src/lib/*"]
+    }
   },
   "include": ["./**/*"],
   "exclude": ["node_modules", "dist"]
